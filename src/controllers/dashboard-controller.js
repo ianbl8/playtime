@@ -14,10 +14,10 @@ export const dashboardController = {
 
   addPlaylist: {
     handler: async function (request, h) {
-      const newPlayList = {
+      const newPlaylist = {
         title: request.payload.title,
       };
-      await db.playlistStore.addPlaylist(newPlayList);
+      await db.playlistStore.addPlaylist(newPlaylist);
       return h.redirect("/dashboard");
     },
   },
