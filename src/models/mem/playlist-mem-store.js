@@ -8,6 +8,10 @@ export const playlistMemStore = {
     return playlists;
   },
 
+  async getUserPlaylists(userid) {
+    return playlists.filter((playlist) => playlist.userid === userid);
+  },
+
   async addPlaylist(playlist) {
     playlist._id = v4();
     playlists.push(playlist);
