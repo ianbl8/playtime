@@ -1,3 +1,25 @@
 {
-  "tracks": []
+  "tracks": [
+    {
+      "title": "I Still Have Faith In You",
+      "artist": "ABBA",
+      "duration": 310,
+      "_id": "12ec0546-fc7b-4573-9f02-309700ec5468",
+      "playlistid": "cb9e4d44-bda5-474e-8ff9-5929aa839630"
+    },
+    {
+      "title": "From Here On It Got Rough",
+      "artist": "Hildegard Knef",
+      "duration": 158,
+      "_id": "a2802b0f-e4c9-4de2-85e6-985e0cf82b4e",
+      "playlistid": "c9f1bb87-b06f-47f2-889f-7abb08ac955f"
+    },
+    {
+      "title": "Von nun an ging's bergab",
+      "artist": "Hildegard Knef",
+      "duration": 164,
+      "_id": "c7656ad0-92b1-4bf4-b019-60e80073cfb7",
+      "playlistid": "c9f1bb87-b06f-47f2-889f-7abb08ac955f"
+    }
+  ]
 }

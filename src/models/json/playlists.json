@@ -1,3 +1,14 @@
 {
-  "playlists": []
+  "playlists": [
+    {
+      "userid": "2f3869e7-1080-42db-849c-a99e3bfa3b23",
+      "title": "Playlist 1",
+      "_id": "cb9e4d44-bda5-474e-8ff9-5929aa839630"
+    },
+    {
+      "userid": "2f3869e7-1080-42db-849c-a99e3bfa3b23",
+      "title": "Playlist 2",
+      "_id": "c9f1bb87-b06f-47f2-889f-7abb08ac955f"
+    }
+  ]
 }

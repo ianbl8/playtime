@@ -1,3 +1,11 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Ian",
+      "lastName": "Test",
+      "email": "ian@test.ie",
+      "password": "test_ie",
+      "_id": "2f3869e7-1080-42db-849c-a99e3bfa3b23"
+    }
+  ]
 }
