@@ -52,7 +52,7 @@ async function init() {
   });
   server.auth.default("session");
 
-  db.init();
+  db.init("mongo"); // options: mongo, json (default: mem)
   server.route(webRoutes);
   await server.start();
   console.log("Server running on %s", server.info.uri);
