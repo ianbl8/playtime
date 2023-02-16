@@ -25,3 +25,19 @@ export const testUsers = [
     password: "secret",
   },
 ];
+
+export const abba = {
+  title: "ABBA"
+};
+
+export const testPlaylists = [
+  {
+    title: "Revolverheld"
+  },
+  {
+    title: "Helene Fischer"
+  },
+  {
+    title: "Andreas Bourani"
+  },
+];
