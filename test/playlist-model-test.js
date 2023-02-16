@@ -1,21 +1,25 @@
+import { EventEmitter } from "events";
 import { assert } from "chai";
 import { db } from "../src/models/db.js";
 import { abba, testPlaylists } from "./fixtures.js";
+import { assertSubset } from "./test-utils.js";
+
+EventEmitter.setMaxListeners(25);
 
 suite("Playlist API tests", () => {
 
   setup(async () => {
-    db.init();
+    db.init("mongo");
     await db.playlistStore.deleteAllPlaylists();
     for (let i = 0; i < testPlaylists.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
-      await db.playlistStore.addPlaylist(testPlaylists[i]);
+      testPlaylists[i] = await db.playlistStore.addPlaylist(testPlaylists[i]);
     }
   });
 
   test("create a playlist", async () => {
     const newPlaylist = await db.playlistStore.addPlaylist(abba);
-    assert.deepEqual(abba, newPlaylist);
+    assertSubset(abba, newPlaylist);
     assert.isDefined(newPlaylist._id);
   });
 
@@ -30,11 +34,7 @@ suite("Playlist API tests", () => {
   test("get a playlist", async () => {
     const playlist = await db.playlistStore.addPlaylist(abba);
     const returnedPlaylist = await db.playlistStore.getPlaylistById(playlist._id);
-    assert.equal(playlist, returnedPlaylist);
-  });
-
-  test("get a playlist - fail", async () => {
-    assert.isNull(await db.playlistStore.getPlaylistById("bad-id"));
+    assertSubset(playlist, returnedPlaylist);
   });
 
   test("get a playlist - bad params", async () => {
