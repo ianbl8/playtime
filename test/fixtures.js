@@ -30,6 +30,12 @@ export const abba = {
   title: "ABBA"
 };
 
+export const abbaTrack = {
+    "title": "I Still Have Faith In You",
+    "artist": "ABBA",
+    "duration": 233
+}
+
 export const testPlaylists = [
   {
     title: "Revolverheld"
@@ -41,3 +47,25 @@ export const testPlaylists = [
     title: "Andreas Bourani"
   },
 ];
+
+export const eighties = {
+  title: "100 Hits: The Best Eighties Album"
+}
+
+export const testTracks = [
+  {
+    "title": "Belinda Carlisle",
+    "artist": "Heaven Is A Place On Earth",
+    "duration": 233
+  },
+  {
+    "title": "Bonnie Tyler",
+    "artist": "Total Eclipse Of The Heart",
+    "duration": 271
+  },
+  {
+    "title": "Eric Carmen",
+    "artist": "Hungry Eyes",
+    "duration": 267
+  },
+]
