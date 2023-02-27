@@ -1,6 +1,6 @@
 {
   "name": "playtime",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Playtime: a Hapi/node application for managing Playlists",
   "main": "src/server.js",
   "type": "module",
