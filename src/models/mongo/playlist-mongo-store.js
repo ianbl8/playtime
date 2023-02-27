@@ -7,6 +7,12 @@ export const playlistMongoStore = {
     return playlists;
   },
 
+  async addPlaylist(playlist) {
+    const newPlaylist = new Playlist(playlist);
+    const playlistObj = await newPlaylist.save();
+    return this.getPlaylistById(playlistObj._id);
+  },
+
   async getPlaylistById(id) {
     if (id) {
       const playlist = await Playlist.findOne({ _id: id }).lean();
@@ -16,12 +22,6 @@ export const playlistMongoStore = {
       return playlist;
     }
     return null;
-  },
-
-  async addPlaylist(playlist) {
-    const newPlaylist = new Playlist(playlist);
-    const playlistObj = await newPlaylist.save();
-    return this.getPlaylistById(playlistObj._id);
   },
 
   async getUserPlaylists(id) {
