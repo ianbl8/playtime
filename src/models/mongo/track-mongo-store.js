@@ -27,7 +27,7 @@ export const trackMongoStore = {
     return null;
   },
 
-  async deleteTrack(id) {
+  async deleteTrackById(id) {
     try {
       await Track.deleteOne({ _id: id });
     } catch (error) {
