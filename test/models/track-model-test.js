@@ -1,12 +1,12 @@
 import { EventEmitter } from "events";
 import { assert } from "chai";
-import { db } from "../src/models/db.js";
-import { abba, abbaTrack, eighties, testTracks } from "./fixtures.js";
-import { assertSubset } from "./test-utils.js";
+import { db } from "../../src/models/db.js";
+import { abba, abbaTrack, eighties, testTracks } from "../fixtures.js";
+import { assertSubset } from "../test-utils.js";
 
 EventEmitter.setMaxListeners(25);
 
-suite("Track API tests", () => {
+suite("Track model tests", () => {
 
   let eightiesList = null;
 

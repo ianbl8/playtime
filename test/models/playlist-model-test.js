@@ -1,12 +1,12 @@
 import { EventEmitter } from "events";
 import { assert } from "chai";
-import { db } from "../src/models/db.js";
-import { abba, testPlaylists } from "./fixtures.js";
-import { assertSubset } from "./test-utils.js";
+import { db } from "../../src/models/db.js";
+import { abba, testPlaylists } from "../fixtures.js";
+import { assertSubset } from "../test-utils.js";
 
 EventEmitter.setMaxListeners(25);
 
-suite("Playlist API tests", () => {
+suite("Playlist model tests", () => {
 
   setup(async () => {
     db.init("mongo");
