@@ -26,13 +26,13 @@ export const db = {
         this.playlistStore = playlistJsonStore;
         this.trackStore = trackJsonStore;
         break;
-        case "mongo":
-          this.userStore = userMongoStore;
-          this.playlistStore = playlistMongoStore;
-          this.trackStore = trackMongoStore;
-          connectMongo();
-          break;
-        default:
+      case "mongo":
+        this.userStore = userMongoStore;
+        this.playlistStore = playlistMongoStore;
+        this.trackStore = trackMongoStore;
+        connectMongo();
+        break;
+      default:
         this.userStore = userMemStore;
         this.playlistStore = playlistMemStore;
         this.trackStore = trackMemStore;
