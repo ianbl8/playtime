@@ -48,7 +48,7 @@ export const userApi = {
     auth: false,
     handler: async function (request, h) {
       try {
-        await db.userStore.deleteAll();
+        await db.userStore.deleteAllUsers();
         return h.response().code(204);
       } catch (err) {
         return Boom.serverUnavailable("Database Error");
